@@ -14,6 +14,7 @@ const displayWeather = data => {
     setValueById("temperature", data.main.temp);
     setValueById("city-name", data.name);
     setValueById("weather", data.weather[0].main)
+    setValueById("country", data.sys.country);
 }
 
 const setValueById = (id, text) =>{
