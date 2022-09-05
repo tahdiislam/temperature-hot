@@ -41,4 +41,4 @@ document.getElementById("search-field").addEventListener('keypress', (event)=>{
     }
 })
 
-weatherData('dhaka')
+weatherData('ramganj')
