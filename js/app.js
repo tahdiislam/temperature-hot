@@ -23,10 +23,21 @@ const setValueById = (id, text) =>{
 // show weather by search 
 
 document.getElementById("search-btn").addEventListener('click', ()=>{
+    showResult();
+})
+
+const showResult = () =>{
     const searchArea = document.getElementById("search-field");
     const city = searchArea.value;
     weatherData(city)
     searchArea.value = '';
+}
+
+document.getElementById("search-field").addEventListener('keypress', (event)=>{
+    if(event.key === 'Enter'){
+        // console.log('Enter')
+        showResult();
+    }
 })
 
 weatherData('dhaka')
