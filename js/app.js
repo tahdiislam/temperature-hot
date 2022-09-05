@@ -10,14 +10,15 @@ const weatherData = (city) => {
 // load current weather by city
 
 const displayWeather = data => {
-    console.log(data)
-    const temperature = document.getElementById("temperature");
-    temperature.innerText = data.main.temp;
-    document.getElementById("city-name").innerText = data.name;
-    document.getElementById("weather").innerText = data.weather[0].main
+    // console.log(data)
+    setValueById("temperature", data.main.temp);
+    setValueById("city-name", data.name);
+    setValueById("weather", data.weather[0].main)
 }
 
-
+const setValueById = (id, text) =>{
+    document.getElementById(id).innerText = text;
+}
 
 // show weather by search 
 
