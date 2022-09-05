@@ -13,7 +13,7 @@ const displayWeather = data => {
     console.log(data)
     const temperature = document.getElementById("temperature");
     temperature.innerText = data.main.temp;
-    document.getElementById("city-name").innerText = ''
+    document.getElementById("city-name").innerText = data.name;
 }
 
 // show weather by search 
@@ -22,6 +22,7 @@ document.getElementById("search-btn").addEventListener('click', ()=>{
     const searchArea = document.getElementById("search-field");
     const searchValue = searchArea.value;
     weatherData(searchValue)
+    searchArea.value = '';
 })
 
 // weatherData()
