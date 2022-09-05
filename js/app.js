@@ -14,15 +14,18 @@ const displayWeather = data => {
     const temperature = document.getElementById("temperature");
     temperature.innerText = data.main.temp;
     document.getElementById("city-name").innerText = data.name;
+    document.getElementById("weather").innerText = data.weather[0].main
 }
+
+
 
 // show weather by search 
 
 document.getElementById("search-btn").addEventListener('click', ()=>{
     const searchArea = document.getElementById("search-field");
-    const searchValue = searchArea.value;
-    weatherData(searchValue)
+    const city = searchArea.value;
+    weatherData(city)
     searchArea.value = '';
 })
 
-// weatherData()
+weatherData('dhaka')
